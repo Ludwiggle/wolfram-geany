@@ -3,7 +3,8 @@
 ***********************************************************************)
 
 
-names=Names["System`*"][[102;;-2]];
+
+names=Names["System`*"][[102;;-2]]~RandomSample~20;
 
 ans=Input@"do you want to create the documentation text files? (y/n)\n"
 
@@ -16,7 +17,7 @@ CreateDirectory@"cliDocs"//Quiet;
 \t Saved:"//Print;
 
 (
-$Urgent=OpenWrite[Directory[]<>"/cliDocs/"<>#1<>".txt", PageWidth->Infinity];
+$Urgent=OpenWrite[Directory[]<>"/cliDocs/"<>#1, PageWidth->Infinity,FormatType->InputForm];
 Information[#1, LongForm->False];
 Close@$Urgent;
 "printf '\r%s' "<>ToString@First@#2//Run;
@@ -61,12 +62,19 @@ StringSplit@ReadString@"!locate filetypes.css"~Select~Function@StringContainsQ[#
 ReadString@@#&//
 StringReplace[#,{
 "extension=css"->"extension=wl\ntag_parser=COBOL",
-"mime_type=text/css"->"mime_type=text/plain",
+"mime_type=text/css"->"mime_type=text/plain\nlexer_filetype=Python\n",
 "comment_open=/*"->"comment_open=(*",
-"comment_close=*/"->"comment_close=*)"
+"comment_close=*/"->"comment_close=*)",
+"[keywords]"~~__~~"[settings]"->"[keywords]\n\n[settings]"
 }]&//
+#<>"
+[build-menu]
+EX_00_LB=_Execute
+EX_00_CM=wolframscript -f %f
+EX_00_WD=\n"&//
 Export["~/.config/geany/filedefs/filetypes.wl.conf",#,"Text"]&//
 "\n\t step 3 \n\t file types config saved in "<>#<>"\n"&//Print
+
 
 
 
