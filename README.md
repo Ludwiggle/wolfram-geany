@@ -1,6 +1,6 @@
 # wolfram-geany
 
-This is a [Wolfram Language](https://en.wikipedia.org/wiki/Wolfram_Language) "plugin" for the [Geany](https://www.geany.org/) text editor editor based on UNIX-like systems (tested on Linux and MacOS)
+This is a [Wolfram Language](https://en.wikipedia.org/wiki/Wolfram_Language) (WL) "plugin" for the [Geany](https://www.geany.org/) text editor editor based on UNIX-like systems (tested on Linux and MacOS)
 
 
 ### Features
@@ -10,11 +10,12 @@ This is a [Wolfram Language](https://en.wikipedia.org/wiki/Wolfram_Language) "pl
 
 ### Dependencies
 
-Download->Install [WolframCDFPlayer](https://www.wolfram.com/cdf-player) and [Wolframscript](https://www.wolfram.com/wolframscript)
+Download/Install [WolframCDFPlayer](https://www.wolfram.com/cdf-player) and [Wolframscript](https://www.wolfram.com/wolframscript)
 
 #### Linux
 Be sure to have mlocate installed 
   `sudo apt-get install mlocate`
+
 
 #### MacOS
 
@@ -25,10 +26,13 @@ Be sure to have mlocate installed
   `brew install findutils`
 
 
-### Installation
+## Installation
 
 `wolframscript -f wolfram-geany.wl`
 
 
 ### Post-Installation
+
+A colorscheme that fits pretty nicely is with the WL is Kugel available from the [Geany colorschemes](https://github.com/codebrainz/geany-themes)
+
 
