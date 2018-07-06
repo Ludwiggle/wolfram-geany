@@ -13,8 +13,9 @@ This is a [Wolfram Language](https://en.wikipedia.org/wiki/Wolfram_Language) (WL
 
 Download/Install:
 
-1. [WolframCDFPlayer](https://www.wolfram.com/cdf-player)
-2. [Wolframscript](https://www.wolfram.com/wolframscript)
+1. [Geany](https://www.geany.org/Download/Releases)
+2. [WolframCDFPlayer](https://www.wolfram.com/cdf-player)
+3. [Wolframscript](https://www.wolfram.com/wolframscript)
 
 #### Linux 
 Be sure to have mlocate installed 
