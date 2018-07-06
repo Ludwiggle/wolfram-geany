@@ -10,20 +10,24 @@ This is a [Wolfram Language](https://en.wikipedia.org/wiki/Wolfram_Language) "pl
 
 ### Dependencies
 
-[WolframCDFPlayer](https://www.wolfram.com/cdf-player), [Wolframscript](https://www.wolfram.com/wolframscript),
-[Zenity](https://en.wikipedia.org/wiki/Zenity) 
+Download->Install [WolframCDFPlayer](https://www.wolfram.com/cdf-player) and [Wolframscript](https://www.wolfram.com/wolframscript)
 
 #### Linux
-Be sure to have mlocate installed (`sudo apt-get install mlocate`)
+Be sure to have mlocate installed 
+  `sudo apt-get install mlocate`
 
 #### MacOS
 
-[Brew](https://brew.sh/) (`/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`), [findutils](http://macappstore.org/findutils/) 
+[Brew](https://brew.sh/) 
+  `/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
+
+[findutils](http://macappstore.org/findutils/) 
+  `brew install findutils`
 
 
 ### Installation
 
-wolframscript -f wolfram-geany.wl
+`wolframscript -f wolfram-geany.wl`
 
 
 ### Post-Installation
