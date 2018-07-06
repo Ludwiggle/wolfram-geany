@@ -5,13 +5,16 @@ This is a [Wolfram Language](https://en.wikipedia.org/wiki/Wolfram_Language) (WL
 
 ### Features
 
-1. Autocompletion
-2. Documentation shortcuts (via _Context Action_)
+1. Autocompletion of WL built-in symbols
+2. Documentation shortcuts (via [zenity](https://en.wikipedia.org/wiki/Zenity) within Geany [_Context Action_](https://www.geany.org/manual/current/#context-actions))
 
 ### Dependencies
 (All Platforms)
 
-Download/Install [WolframCDFPlayer](https://www.wolfram.com/cdf-player) and [Wolframscript](https://www.wolfram.com/wolframscript)
+Download/Install:
+
+1. [WolframCDFPlayer](https://www.wolfram.com/cdf-player)
+2. [Wolframscript](https://www.wolfram.com/wolframscript)
 
 #### Linux 
 Be sure to have mlocate installed 
