@@ -6,7 +6,7 @@ This is a [Wolfram Language](https://en.wikipedia.org/wiki/Wolfram_Language) (WL
 ### Features
 
 1. Autocompletion
-2. Documentation shortcuts
+2. Documentation shortcuts (via _Context Action_)
 
 ### Dependencies
 (All Platforms)
@@ -22,7 +22,7 @@ Be sure to have mlocate installed
 
 #### MacOS
 
-[Brew](https://brew.sh/) 
+[brew](https://brew.sh/) 
   `/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
 
 [findutils](http://macappstore.org/findutils/) 
@@ -39,6 +39,7 @@ Be sure to have mlocate installed
 
 ### Post-Installation
 
-A colorscheme that fits pretty nicely is with the WL is Kugel available from the [Geany colorschemes](https://github.com/codebrainz/geany-themes)
+A colorscheme that fits pretty nicely is with the WL syntax is Kugel from the [Geany colorschemes](https://github.com/codebrainz/geany-themes)
+
 
 
