@@ -9,13 +9,16 @@ This is a [Wolfram Language](https://en.wikipedia.org/wiki/Wolfram_Language) (WL
 2. Documentation shortcuts
 
 ### Dependencies
+(All Platforms)
 
 Download/Install [WolframCDFPlayer](https://www.wolfram.com/cdf-player) and [Wolframscript](https://www.wolfram.com/wolframscript)
 
-#### Linux
+#### Linux 
 Be sure to have mlocate installed 
   `sudo apt-get install mlocate`
 
+[zenity](https://gitlab.gnome.org/GNOME/zenity)
+  `sudo apt-get install zenity`
 
 #### MacOS
 
@@ -24,6 +27,9 @@ Be sure to have mlocate installed
 
 [findutils](http://macappstore.org/findutils/) 
   `brew install findutils`
+
+[zenity](http://brewformulas.org/Zenity)
+  `brew install zenity`
 
 
 ## Installation
