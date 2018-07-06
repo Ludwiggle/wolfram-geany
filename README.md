@@ -6,7 +6,7 @@ This is a [Wolfram Language](https://en.wikipedia.org/wiki/Wolfram_Language) (WL
 ### Features
 
 1. Autocompletion of WL built-in symbols
-2. Documentation shortcuts (via [zenity](https://en.wikipedia.org/wiki/Zenity) within Geany [_Context Action_](https://www.geany.org/manual/current/#context-actions))
+2. Documentation shortcuts (via [zenity](https://en.wikipedia.org/wiki/Zenity) and Geany [_Context Action_](https://www.geany.org/manual/current/#context-actions))
 
 ### Dependencies
 (All Platforms)
@@ -42,7 +42,18 @@ Be sure to have mlocate installed
 
 ### Post-Installation
 
-A colorscheme that fits pretty nicely is with the WL syntax is Kugel from the [Geany colorschemes](https://github.com/codebrainz/geany-themes)
+You can display the documentation relative to the WL symbol at the cursor position from the menu entry in the popup menu of the editor and also a keyboard shortcut _Edit->Preferences->Keybindings->Editor:_ Context Action
+
+A colorscheme that fits pretty nicely with the WL syntax is Kugel from the [Geany colorschemes](https://github.com/codebrainz/geany-themes)
+
+The installation automatically configures Geany [_Execute_](https://www.geany.org/manual/current/#execute) to run a WL script by pressing F5.
+In order to display the desired outputs, we suggest to install [urxvt](https://wiki.archlinux.org/index.php/rxvt-unicode), rice it up a little [](https://gist.github.com/ei-grad/3345657) and adjust Geany configuration _Edit->Preferences->Tools->Terminal: `urxvt -e /bin/sh %c`  
+
+#### BUGS
+
+On MacOS, evoking zenity from the _Context Action_ does not work, even thougth the very same command works if executed from the terminal. Please contribute! Thanks. 
+
+
 
 
 
