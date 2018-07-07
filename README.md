@@ -48,13 +48,8 @@ You can display the documentation relative to the WL symbol at the cursor positi
 A colorscheme that fits pretty nicely with the WL syntax is Kugel from the [Geany colorschemes](https://github.com/codebrainz/geany-themes)
 
 The installation automatically configures Geany [_Execute_](https://www.geany.org/manual/current/#execute) to run a WL script by pressing F5.
-In order to display the desired outputs, we suggest to install [urxvt](https://wiki.archlinux.org/index.php/rxvt-unicode), [rice it up](https://gist.github.com/ei-grad/3345657) a little and adjust Geany configuration to prompt out the script outputs _Edit->Preferences->Tools->Terminal: `urxvt -e /bin/sh %c`  
+In order to display the desired outputs, we suggest to install [urxvt](https://wiki.archlinux.org/index.php/rxvt-unicode), [rice it up](https://gist.github.com/ei-grad/3345657) a little and adjust Geany configuration to display the script outputs _Edit->Preferences->Tools->Terminal_: `urxvt -e /bin/sh %c`  
 
 #### BUGS
 
-On MacOS, evoking zenity from the _Context Action_ does not work, even thougth the very same command works if executed from the terminal. Please contribute! Thanks. 
-
-
-
-
-
+On MacOS, evoking zenity from the _Context Action_ does not work, even though the very same command works if executed from the terminal. Please contribute! Thanks. 
