@@ -1,6 +1,6 @@
 # wolfram-geany
 
-This is a [Wolfram Language](https://en.wikipedia.org/wiki/Wolfram_Language) (WL) "plugin" for the [Geany](https://www.geany.org/) text editor editor based on UNIX-like systems (tested on Linux and MacOS)
+This is a [Wolfram Language](https://en.wikipedia.org/wiki/Wolfram_Language) (WL) plugin for the [Geany](https://www.geany.org/) text editor editor based on UNIX-like systems (tested on Linux and MacOS)
 
 
 ### Features
