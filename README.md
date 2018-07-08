@@ -9,7 +9,7 @@ This is a [Wolfram Language](https://en.wikipedia.org/wiki/Wolfram_Language) (WL
 1. Autocompletion of WL built-in symbols
 2. Documentation shortcuts (via [zenity](https://en.wikipedia.org/wiki/Zenity) and Geany [_Context Action_](https://www.geany.org/manual/current/#context-actions))
 
-<video src="https://github.com/Ludwiggle/wolfram-geany/blob/master/output.mp4" width="320" height="200" controls preload></video>
+Watch a demo [here](https://www.youtube.com/watch?v=-IqsqBloF6k)
 
 
 ### Dependencies
