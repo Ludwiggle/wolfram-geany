@@ -1,3 +1,6 @@
+<script src="http://api.html5media.info/1.1.8/html5media.min.js"></script>
+
+
 # wolfram-geany
 
 This is a [Wolfram Language](https://en.wikipedia.org/wiki/Wolfram_Language) (WL) plugin for the text editor [Geany](https://www.geany.org/) based on UNIX-like systems (tested on Linux and MacOS)
