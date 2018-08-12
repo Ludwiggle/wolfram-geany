@@ -18,8 +18,10 @@ Watch a demo [here](https://www.youtube.com/watch?v=-IqsqBloF6k)
 Download/Install:
 
 1. [Geany](https://www.geany.org/Download/Releases)
-2. [WolframCDFPlayer](https://www.wolfram.com/cdf-player)
-3. [Wolframscript](https://www.wolfram.com/wolframscript)
+2. [WolframKernel](https://www.wolfram.com/cdf-player) + [Wolframscript](https://www.wolfram.com/wolframscript)
+
+Run `$ wolframscript -configure` and set the variable `WOLFRAMSCRIPT_KERNELPATH` to your local `WolframKernel` address
+
 
 #### Linux 
 Be sure to have mlocate installed 
