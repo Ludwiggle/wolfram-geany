@@ -53,8 +53,7 @@ Be sure to have mlocate installed
 
 - Configure documentation pop-up: go to _Edit->Preferences->Keybindings->Editor> Context Action_ and set a custom keybinding e.g. `Ctrl+h`. Once the keybinding is configured, press `Ctrl+h` to display the documentation of the built-in symbol under the cursor.
 
-- The installation automatically configures Geany [_Execute_](https://www.geany.org/manual/current/#execute) to run a WL script by pressing F5. The script outputs can be displayed within the Geany [Virtual Terminal Emulator (VTE)](https://www.geany.org/manual/current/#virtual-terminal-emulator-widget-vte) 
-As an alternative to the VTE, we suggest to install [urxvt](https://wiki.archlinux.org/index.php/rxvt-unicode), [rice it up](https://gist.github.com/ei-grad/3345657) and adjust Geany configuration to display the script outputs like so: go to _Edit->Preferences->Tools->Terminal_ and paste `urxvt -e /bin/sh %c`  
+- The installation automatically configures Geany [_Execute_](https://www.geany.org/manual/current/#execute) to run a WL script by pressing F5. The script outputs can be displayed within the Geany [Virtual Terminal Emulator (VTE)](https://www.geany.org/manual/current/#virtual-terminal-emulator-widget-vte). As an alternative to the VTE, we suggest to install [urxvt](https://wiki.archlinux.org/index.php/rxvt-unicode), [rice it up](https://gist.github.com/ei-grad/3345657) and adjust Geany configuration to display the script outputs like so: go to _Edit->Preferences->Tools->Terminal_ and paste `urxvt -e /bin/sh %c`  
 
 #### BUGS
 
