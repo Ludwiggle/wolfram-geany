@@ -24,6 +24,10 @@ Run `$ wolframscript -configure` and set the variable `WOLFRAMSCRIPT_KERNELPATH`
 
 
 #### Linux 
+
+[Geany Plugins](https://plugins.geany.org/)
+  `sudo apt-get install geany-plugins`
+
 Be sure to have mlocate installed 
   `sudo apt-get install mlocate`
 
