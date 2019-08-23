@@ -12,7 +12,7 @@ A [Wolfram Language](https://en.wikipedia.org/wiki/Wolfram_Language) (WL) plugin
 Watch a demo [here](https://www.youtube.com/watch?v=-IqsqBloF6k)
 
 
-### Dependencies
+### Prerequisites
 
 1. [Geany](https://www.geany.org/Download/Releases)
 2. [Wolfram Engine](https://www.wolfram.com/engine/)
@@ -44,6 +44,8 @@ Watch a demo [here](https://www.youtube.com/watch?v=-IqsqBloF6k)
 ## Installation
 
 `wolframscript -f wolfram-geany.wl`
+
+If upgrading to a newer version of wolfram-geany or reinstalling it, clean the `~/.config/geany` folder.
 
 
 ### Post-Installation
