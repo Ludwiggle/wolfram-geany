@@ -3,14 +3,14 @@ _____________________Create Documentation__________________________
 ____________________________________________________________________"
 
 
-names=Names["System`*"][[117;;-2]]
+names = Names["System`*"][[117;;-2]]
 
-homedir="!echo $HOME"//ReadLine
+homedir = "!echo $HOME"//ReadLine
 
-docdir=homedir<>"/.config/geany/plugins/wolfram/docs/"
+docdir = homedir<>"/.config/geany/plugins/wolfram/docs/"
 
 
-CreateDirectory@docdir//Quiet
+CreateDirectory@docdir // Quiet
 
 "\n\tPlease wait, "<>ToString@Length@names<>" documentation pages to save"//Print
 
@@ -34,35 +34,37 @@ _______________________________________________________________________"
 
 homedir<>"/.config/geany/tags"//CreateDirectory//Quiet
 
-#<>"| | |"&/@names//
-Riffle[#,"\n"]&//StringJoin//
-Export[homedir<>"/.config/geany/tags/wl.wl.tags", #<>"\n","Text"]&//
-"\n\t step 1 \n\t tags files saved in "<>#&//Print
+#<>"| | |"& /@ names //
+Riffle[#,"\n"]& // StringJoin //
+Export[homedir<>"/.config/geany/tags/wl.wl.tags", #<>"\n","Text"]& //
+"\n\t step 1 \n\t tags files saved in "<>#& // Print
 
 
 
 
 "____________STEP 2____________"
 
-extConFiles=StringSplit@ReadString@"!locate filetype_extensions.conf"~Select~Function@StringContainsQ[#,"geany"];
-extConfUsr=extConFiles~Select~Function@Not@StringContainsQ[#,homedir]//First
-extConfHome=homedir<>"/.config/geany/filetype_extensions.conf"
+extConFiles = StringSplit@ReadString@"!locate filetype_extensions.conf" ~ Select ~ Function@StringContainsQ[#,"geany"];
+extConfUsr = extConFiles ~ Select ~ Function@Not@StringContainsQ[#,homedir] // First
+extConfHome = homedir<>"/.config/geany/filetype_extensions.conf"
 
 Export[extConfHome,
-ReadString@extConfUsr~StringReplace~{
+ReadString@extConfUsr ~ StringReplace ~ {
 	"[Extensions]"->"[Extensions]\nwl=*.wl;*.wls;*.m;",
 	"Misc=JSON;"->"Misc=JSON;wl;"},
-"Text"]//
-"\n\t step 2 \n\t file extensions saved in "<>#&//Print
+"Text"] //
+"\n\t step 2 \n\t file extensions saved in "<>#& // Print
 
 
 
 
 "____________STEP 3____________"
 
-StringSplit@ReadString@"!locate filetypes.css"~Select~Function@StringContainsQ[#,"geany"]~Select~Function@Not@StringContainsQ[#,homedir]//
-ReadString@@#&//
-StringReplace[#,{
+StringSplit@ReadString@"!locate filetypes.css"~
+Select~Function@StringContainsQ[#,"geany"]~
+Select~Function@Not@StringContainsQ[#,homedir] //
+ReadString@@#& //
+StringReplace[#, {
 "extension=css"->"extension=wl\ntag_parser=COBOL",
 "mime_type=text/css"->"mime_type=text/plain\nlexer_filetype=COBOL\n",
 "comment_open=/*"->"comment_open=(*",
@@ -70,14 +72,14 @@ StringReplace[#,{
 "[keywords]"~~__~~"[settings]"->"[keywords]\n\n[settings]",
 "comment_use_indent=true"->"comment_use_indent=false",
 "context_action_cmd="->"context_action_cmd=zenity --text-info --filename="<>docdir<>"%s --title=\"Wolfram Language\" --no-wrap --width=800 --height=400"
-}]&//
+}]& //
 #<>"
 [build-menu]
 EX_00_LB=_Execute
 EX_00_CM=wolframscript -f %f
-EX_00_WD=\n"&//
-Export[homedir<>"/.config/geany/filedefs/filetypes.wl.conf",#,"Text"]&//
-"\n\t step 3 \n\t file types config saved in "<>#<>"\n"&//Print
+EX_00_WD=\n"& //
+Export[homedir<>"/.config/geany/filedefs/filetypes.wl.conf", #, "Text"]& //
+"\n\t step 3 \n\t file types config saved in "<>#<>"\n"& // Print
 
  
 
