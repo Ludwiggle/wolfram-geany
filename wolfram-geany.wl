@@ -5,14 +5,14 @@ ____________________________________________________________________"
 
 names = Names["System`*"][[117;;-2]]
 
-homedir = "!echo $HOME"//ReadLine
+homedir = "!echo $HOME" // ReadLine
 
 docdir = homedir<>"/.config/geany/plugins/wolfram/docs/"
 
 
 CreateDirectory@docdir // Quiet
 
-"\n\tPlease wait, "<>ToString@Length@names<>" documentation pages to save"//Print
+"\n\tPlease wait, "<>ToString@Length@names<>" documentation pages to save" // Print
 
 
 Export[docdir<>#, TextForm@Information@#, "Text"]& /@ names
@@ -26,13 +26,12 @@ _______________________________________________________________________"
 
 
 "\n\n\t configure Geany autocompletion:
-\t see <https://wiki.geany.org/howtos/custom_autocomplete> "//Print
-
+\t see <https://wiki.geany.org/howtos/custom_autocomplete> " // Print
 
 
 "____________STEP 1____________"
 
-homedir<>"/.config/geany/tags"//CreateDirectory//Quiet
+homedir<>"/.config/geany/tags" // CreateDirectory // Quiet
 
 #<>"| | |"& /@ names //
 Riffle[#,"\n"]& // StringJoin //
@@ -44,14 +43,17 @@ Export[homedir<>"/.config/geany/tags/wl.wl.tags", #<>"\n","Text"]& //
 
 "____________STEP 2____________"
 
-extConFiles = StringSplit@ReadString@"!locate filetype_extensions.conf" ~ Select ~ Function@StringContainsQ[#,"geany"];
+extConFiles = StringSplit@ReadString@"!locate filetype_extensions.conf"~
+Select~Function@StringContainsQ[#,"geany"];
+
 extConfUsr = extConFiles ~ Select ~ Function@Not@StringContainsQ[#,homedir] // First
+
 extConfHome = homedir<>"/.config/geany/filetype_extensions.conf"
 
 Export[extConfHome,
 ReadString@extConfUsr ~ StringReplace ~ {
-	"[Extensions]"->"[Extensions]\nwl=*.wl;*.wls;*.m;",
-	"Misc=JSON;"->"Misc=JSON;wl;"},
+	"[Extensions]" -> "[Extensions]\nwl=*.wl;*.wls;*.m;",
+	"Misc=JSON;" -> "Misc=JSON;wl;"},
 "Text"] //
 "\n\t step 2 \n\t file extensions saved in "<>#& // Print
 
