@@ -3,8 +3,7 @@ _____________________Create Documentation__________________________
 ____________________________________________________________________"
 
 
-
-names=Names["System`*"][[102;;-2]]
+names=Names["System`*"][[117;;-2]]
 
 homedir="!echo $HOME"//ReadLine
 
@@ -13,15 +12,10 @@ docdir=homedir<>"/.config/geany/plugins/wolfram/docs/"
 
 CreateDirectory@docdir//Quiet
 
-"\n\t "<>ToString@Length@names<>" documentation files.\n\t Saved:"//Print
+"\n\tPlease wait, "<>ToString@Length@names<>" documentation pages to save"//Print
 
 
-($Urgent=OpenWrite[docdir<>#1, PageWidth->Infinity];
-Information[#1, LongForm->False];
-Close@$Urgent;
-"printf '\r%s' "<>ToString@First@#2//Run;
-)&~MapIndexed~names
-
+Export[docdir<>#, TextForm@Information@#, "Text"]& /@ names
 
 
 
@@ -33,7 +27,6 @@ _______________________________________________________________________"
 
 "\n\n\t configure Geany autocompletion:
 \t see <https://wiki.geany.org/howtos/custom_autocomplete> "//Print
-
 
 
 
