@@ -23,7 +23,7 @@ Watch a demo [here](https://www.youtube.com/watch?v=-IqsqBloF6k)
 [Geany Plugins](https://plugins.geany.org/)
   `sudo apt-get install geany-plugins`
 
-`mlocate` 
+mlocate:
   `sudo apt-get install mlocate`
 
 [zenity](https://gitlab.gnome.org/GNOME/zenity)
@@ -50,12 +50,15 @@ If upgrading to a newer version of wolfram-geany or reinstalling it, clean the `
 
 ### Post-Installation
 
-- Pick up a decent colorscheme like Kugel from the [Geany colorschemes](https://github.com/codebrainz/geany-themes)
+- **Choose a colorscheme** like Kugel from [here](https://github.com/codebrainz/geany-themes)
 
-- Configure documentation pop-up: go to _Edit->Preferences->Keybindings->Editor> Context Action_ and set a custom keybinding e.g. `Ctrl+h`. Once the keybinding is configured, press `Ctrl+h` to display the documentation of the built-in symbol under the cursor.
+- **Configure documentation pop-up**: go to _Edit->Preferences->Keybindings->Editor> Context Action_ and set a custom keybinding e.g. `Ctrl+h`. Once the keybinding is configured, press `Ctrl+h` to display the documentation of the built-in symbol under the cursor.
 
-- The installation automatically configures Geany [_Execute_](https://www.geany.org/manual/current/#execute) to run a WL script by pressing F5. The script outputs can be displayed within the Geany [Virtual Terminal Emulator (VTE)](https://www.geany.org/manual/current/#virtual-terminal-emulator-widget-vte). As an alternative to the VTE, install [urxvt](https://wiki.archlinux.org/index.php/rxvt-unicode), [rice it up](https://gist.github.com/ei-grad/3345657) and adjust Geany configuration to display the script outputs like with _Edit->Preferences->Tools->Terminal_ and paste `urxvt -e /bin/sh %c`  
+- **Configure terminal emulator**: The installation automatically configures Geany [_Execute_](https://www.geany.org/manual/current/#execute) to run a WL script by pressing F5. The script outputs can be displayed within the Geany [Virtual Terminal Emulator (VTE)](https://www.geany.org/manual/current/#virtual-terminal-emulator-widget-vte). Otherwise, install [urxvt](https://wiki.archlinux.org/index.php/rxvt-unicode), (optionally [rice it up](https://gist.github.com/ei-grad/3345657)) then go to _Edit->Preferences->Tools->Terminal_ and paste `urxvt -e /bin/sh %c`  
 
 #### BUGS
 
 On MacOS, evoking zenity from the _Context Action_ does not work, even though the very same command works if executed from the terminal. Please contribute! Thanks. 
+
+#### To do
+* A proper syntax highlighting
